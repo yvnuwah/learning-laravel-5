@@ -12,10 +12,17 @@
 */
 
 Route::get('/', 'WelcomeController@index');
+Route::get('contact', 'WelcomeController@contact');
+
+Route::get('about', 'PagesController@about');
+Route::get('contact', 'PagesController@contact');
+
+Route::get('numpicker', 'NumberPicker@index');
+Route::post('numpicker', 'NumberPicker@pick_number');
 
 Route::get('home', 'HomeController@index');
 
 Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
+    'auth' => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
 ]);
